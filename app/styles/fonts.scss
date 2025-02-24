@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Syne";
+    src: url("../assets/fonts/syne/Syne-VariableFont_wght.ttf")
+      format("truetype");
+    font-weight: 400 800;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/inter/Inter-VariableFont_opsz,wght.ttf")
+      format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-variation-settings: "opsz" 18;
+  }
+
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("../assets/fonts/plus_jakarta_sans/PlusJakartaSans-VariableFont_wght.ttf")
+      format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+}

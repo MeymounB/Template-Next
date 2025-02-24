@@ -1,0 +1,36 @@
+# Règles globales
+User-agent: *
+Allow: /
+Crawl-delay: 10
+
+# Règles spécifiques pour Google
+User-agent: Googlebot
+Allow: /
+Allow: /*.js$
+Allow: /*.css$
+
+# Pages principales
+Allow: /mentions-legales
+Allow: /offres/bureau-prive
+Allow: /offres/espace-partage
+Allow: /cookies
+
+# Ressources
+Allow: /site.webmanifest
+Allow: /favicon.ico
+Allow: /api/og
+
+# Protection des routes techniques
+Disallow: /api/*
+Allow: /api/og
+Disallow: /404
+Disallow: /500
+Disallow: /_next
+Disallow: /static
+
+# Host
+Host: https://www.espacecadet.com
+
+# Sitemaps
+Sitemap: https://www.espacecadet.com/sitemap.xml
+Sitemap: https://www.espacecadet.com/sitemap-0.xml

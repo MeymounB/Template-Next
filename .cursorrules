@@ -1,0 +1,8 @@
+Décrivez ici votre projet globalement très brievement. Puis votre Stack, puis les parties techniques du code souhaitées.
+
+This project is the commercial landing page for the Next Generation compagny that is a company that offers a wide range of services such as web development, mobile development, and digital marketing.
+Our stack is Next.js, TailwindCSS, Nextui, SASS, @iconify/react and Framer Motion.
+Please use TSX (Typescript) with well typed code every time you generate code and react arrow function components.
+Never use `React.FN` and never use `React.FC`, just type props.
+Please use as much as possible the packages that are already installed in the project but tell me explicitely when you need a specific package in order to make the code work.
+Always respond in Français.

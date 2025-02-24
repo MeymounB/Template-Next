@@ -1,0 +1,8 @@
+// Ici nous définissons les règles de linting pour Hint, un outil de linting pour les projets Next.js
+// Dans ce cas, nous désactivons la règle no-inline-styles qui est une règle qui permet de désactiver les styles en ligne
+{
+  "extends": ["development"],
+  "hints": {
+    "no-inline-styles": "off",
+  },
+}

@@ -1,0 +1,9 @@
+echo "Pre-Push hook go brrrrrr 🚀"
+
+npm exec analyze
+if [ $? -ne 0 ]; then
+  echo "Build failed bro ❌☠️"
+fi
+
+echo "Pre-Push hook done ✅🚀"
+echo "OTSUKARE-SAMA ! Push complete. Sir ! 🫡"
