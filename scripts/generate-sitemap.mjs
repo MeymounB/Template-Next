@@ -65,10 +65,11 @@ Disallow: /*.js$
 Disallow: /*.css$
 
 # Host
-Host: https://www.tonsite.fr
+Host: ${DOMAIN}
 
 # Sitemaps
 Sitemap: ${DOMAIN}/sitemap.xml
+Sitemap: ${DOMAIN}/sitemap-0.xml
 
 # Crawl-delay
 Crawl-delay: 10
