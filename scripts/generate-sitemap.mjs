@@ -9,10 +9,7 @@ const DOMAIN = "https://www.mudoclubargenteuil.fr";
 const ROUTES = [
   "/",
   "/tarifs",
-  "/blog-evenements",
-  "/galerie",
   "/contact",
-  "/inscription",
   "/mentions-legales",
 ];
 
@@ -68,7 +65,7 @@ Disallow: /*.js$
 Disallow: /*.css$
 
 # Host
-Host: https://www.mudoclubargenteuil.fr
+Host: https://www.tonsite.fr
 
 # Sitemaps
 Sitemap: ${DOMAIN}/sitemap.xml
