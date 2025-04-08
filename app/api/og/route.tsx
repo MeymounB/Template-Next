@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
@@ -22,6 +23,7 @@ export async function GET(request: Request) {
             backgroundColor: "#1C1C1C",
           }}
         >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             width={1200}
             height={630}
