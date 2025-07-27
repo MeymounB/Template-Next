@@ -1,7 +1,7 @@
 // Providers est un composant qui permet de fournir les providers pour le site
 "use client";
 
-import { NextUIProvider } from "@nextui-org/react";
+import { HeroUIProvider } from "@heroui/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 export function Providers({ children }: { children: React.ReactNode }) {
@@ -11,7 +11,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       enableSystem={false}
       defaultTheme="light"
     >
-      <NextUIProvider>{children}</NextUIProvider>
+      <HeroUIProvider>{children}</HeroUIProvider>
     </NextThemesProvider>
   );
 }

@@ -1,4 +1,4 @@
-import { NextUIProvider } from "@nextui-org/react";
+import { HeroUIProvider } from "@heroui/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { AppProps } from "next/app";
 
@@ -9,9 +9,9 @@ function App({ Component, pageProps }: AppProps) {
       enableSystem={false}
       defaultTheme="dark"
     >
-      <NextUIProvider>
+      <HeroUIProvider>
         <Component {...pageProps} />
-      </NextUIProvider>
+      </HeroUIProvider>
     </NextThemesProvider>
   );
 }
