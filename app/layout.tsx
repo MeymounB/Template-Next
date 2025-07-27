@@ -1,19 +1,29 @@
 // Ce fichier permet de gérer le layout de la page principale
 
 import { Providers } from "@/providers";
-import { Header } from "./components/layout/Header";
-import Script from "next/script";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
-import { getPageMetadata } from "@/utils/meta/metadata";
-import { jsonLd } from "@/utils/meta/jsonLd";
 import "@/styles/_index.scss";
 
 import { Canonical } from "@/components/Canonical";
-import { Inter } from "next/font/google";
-import { Footer } from "@/components/layout/Footer";
-const inter = Inter({ subsets: ["latin"] });
+import { getPageMetadata } from "@/utils/meta/metadata";
+import { JsonLdScript } from "@/components/JsonLd";
+import { Metadata } from "next";
+import { headers } from "next/headers";
 
-export const metadata = getPageMetadata();
+export async function generateMetadata(): Promise<Metadata> {
+  const headersList = headers();
+  const pathname = headersList.get("x-pathname") || "/";
+  const pageMetadata = getPageMetadata(pathname);
+
+  // On supprime le canonical des métadonnées pour éviter le conflit
+  const { alternates, ...metadataWithoutCanonical } = pageMetadata;
+
+  return {
+    ...metadataWithoutCanonical,
+  };
+}
 
 export default function RootLayout({
   children,
@@ -27,7 +37,7 @@ export default function RootLayout({
         <meta name="googlebot" content="index, follow" />
         <Canonical />
       </head>
-      <body className={`${inter.className} overflow-x-hidden`}>
+      <body className={`overflow-x-hidden`} id="root">
         <div className="z-1 relative">
           <Providers>
             <Header />
@@ -35,12 +45,7 @@ export default function RootLayout({
             <Footer />
           </Providers>
         </div>
-        <Script
-          id="json-ld"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLdScript />
       </body>
     </html>
   );

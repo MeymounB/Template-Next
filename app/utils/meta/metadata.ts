@@ -1,15 +1,17 @@
 // metadata.ts est le fichier de configuration pour le SEO de votre application
 
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 const title = "Template Next Generation - Un template moderne pour Next.js";
 const description =
   "Un template Next.js moderne et performant avec TypeScript, TailwindCSS, et plus encore.";
 
 const baseUrl =
-  process.env.NEXT_PUBLIC_BASE_URL || "https://github.com/votre-repo";
+  process.env.NEXT_PUBLIC_BASE_URL || "https://www.next-generation.dev";
 
 export function getPageMetadata(path: string = ""): Metadata {
+  const url = path ? `${baseUrl}/${path}` : baseUrl;
+
   return {
     metadataBase: new URL(baseUrl),
     title: {
@@ -54,15 +56,22 @@ export function getPageMetadata(path: string = ""): Metadata {
           sizes: "any",
         },
       ],
+      apple: [
+        {
+          url: "/apple-touch-icon.png",
+          sizes: "180x180",
+          type: "image/png",
+        },
+      ],
     },
     openGraph: {
       title,
       description,
-      url: baseUrl,
+      url,
       siteName: "Template Next Generation",
       images: [
         {
-          url: `${baseUrl}/og-image.png`,
+          url: `${baseUrl}/api/og`,
           width: 1200,
           height: 630,
           alt: "Template Next Generation - Un template moderne pour Next.js",
@@ -77,6 +86,7 @@ export function getPageMetadata(path: string = ""): Metadata {
       description,
       creator: "@nextgeneration",
       site: "@nextgeneration",
+      images: [`${baseUrl}/api/og`],
     },
     robots: {
       index: true,
@@ -85,21 +95,27 @@ export function getPageMetadata(path: string = ""): Metadata {
       googleBot: {
         index: true,
         follow: true,
+        noimageindex: true,
         "max-video-preview": -1,
         "max-image-preview": "large",
         "max-snippet": -1,
       },
     },
     alternates: {
+      canonical: url,
       languages: {
-        "fr-FR": path ? `${baseUrl}/${path}` : baseUrl,
+        "fr-FR": url,
       },
     },
     manifest: "/site.webmanifest",
     other: {
-      generator: "Next.js",
       "application-name": "Template Next Generation",
       "apple-mobile-web-app-title": "Template Next Generation",
+      "X-Robots-Tag":
+        "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    },
+    verification: {
+      google: "google-site-verification-code",
     },
   };
 }
