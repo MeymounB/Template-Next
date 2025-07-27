@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>https://www.mudoclubargenteuil.fr/sitemap-0.xml</loc>
-    <lastmod>2025-04-08T10:53:07.728Z</lastmod>
-  </sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.votre-site.fr/</loc>
+    <lastmod>2025-07-27T14:03:46.933Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.votre-site.fr/"/>
+  </url>
+  <url>
+    <loc>https://www.votre-site.fr/docs</loc>
+    <lastmod>2025-07-27T14:03:46.933Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.votre-site.fr/docs"/>
+  </url>
+  <url>
+    <loc>https://www.votre-site.fr/components</loc>
+    <lastmod>2025-07-27T14:03:46.933Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.votre-site.fr/components"/>
+  </url>
+  <url>
+    <loc>https://www.votre-site.fr/examples</loc>
+    <lastmod>2025-07-27T14:03:46.933Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.votre-site.fr/examples"/>
+  </url>
+  <url>
+    <loc>https://www.votre-site.fr/templates</loc>
+    <lastmod>2025-07-27T14:03:46.933Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.votre-site.fr/templates"/>
+  </url>
+  <url>
+    <loc>https://www.votre-site.fr/changelog</loc>
+    <lastmod>2025-07-27T14:03:46.933Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.votre-site.fr/changelog"/>
+  </url>
+</urlset>

@@ -1,24 +1,29 @@
-# *
+# Global rules
 User-agent: *
 Allow: /
-Disallow: /api
-Disallow: /404
-Disallow: /500
-Disallow: /_next
-Disallow: /static
-Disallow: /*.json$
-Disallow: /*.js$
-Disallow: /*.css$
-
-# Host
-Host: https://www.mudoclubargenteuil.fr
-
-# Sitemaps
-Sitemap: https://www.mudoclubargenteuil.fr/sitemap.xml
-Sitemap: https://www.mudoclubargenteuil.fr/sitemap-0.xml
-
-# Crawl-delay
 Crawl-delay: 10
 
-# Cache
-Cache-Control: max-age=3600
+# Protection des routes techniques
+Disallow: /api/*
+Allow: /api/og
+
+# Protection des routes de développement
+Disallow: /_next/*
+Disallow: /static/*
+Disallow: /public/*
+Disallow: /node_modules/*
+
+# Ressources
+Allow: /site.webmanifest
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /api/og
+Allow: /sitemap.xml
+Allow: /sitemap-0.xml
+
+# Host
+Host: https://www.votre-site.fr
+
+# Sitemaps
+Sitemap: https://www.votre-site.fr/sitemap.xml
+Sitemap: https://www.votre-site.fr/sitemap-0.xml
